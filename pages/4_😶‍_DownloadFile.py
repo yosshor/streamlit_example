@@ -20,10 +20,10 @@ filename = file_selector()
 st.write('You selected `%s`' % filename)
 
 
-
 uploaded_file = st.file_uploader("Upload a file",
                                  type=(["csv", "txt", "xlsx", "xls"]),
-                                 on_change = change_file_state)
+                                 on_change = change_file_state,
+                                 key='uploadFile')
 global df
 
 
